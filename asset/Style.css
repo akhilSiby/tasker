@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --success: #4aa77a;
+    --primary: #172942;
+    --secondary: #dfdfdf;
+}
+
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.body-with-color {
+    background-color: var(--primary);
+}
+
+#mainBody {
+    background-color: var(--secondary);
+    transition: .5s;
+    padding: 16px;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    border-radius: 30px 0px 0px 30px;
+}
+
+form {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.active {
+    color: rgb(209, 54, 54) !important;
+    font-weight: 700;
+}
+
+.user-name {
+    padding: 10px 20px;
+}
+
+.circular--landscape {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.circular--landscape img {
+    width: auto;
+    height: 100%;
+    margin-left: -30px;
+}
+
+.cu-button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background-color: var(--success);
+    color: rgb(255, 255, 255);
+    width: 180px;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+.cu-input {
+    border: 1px solid gray;
+    border-radius: 4px;
+    border-left: 5px solid gray;
+    outline: none;
+}
+
+.cu-navbar {
+    width: 300px;
+    background-color: royalblue;
+}
+
+/* Side menubar */
+.sidebar-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar-menu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #b3b1b1;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar-menu svg {
+    width: 17px;
+    height: 17px;
+    margin-right: 5px;
+}
+
+.sidebar-menu a:hover {
+    color: #ffffff;
+}
+
+
+/* Click drag scroll */
+@supports (display: grid) {
+
+    .h-scroll-wrap {
+        position: relative;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        white-space: nowrap;
+        transition: all 0.2s;
+        transform: scale(0.98);
+        will-change: transform;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .h-scroll-wrap.h-scroll-active {
+        cursor: grabbing;
+        cursor: -webkit-grabbing;
+    }
+
+}
+
+.add-category-btn {
+    border-radius: 20px;
+    width: 80%;
+    min-height: 40px;
+    border: 2px black dotted;
+}
+
+/* Click drag scroll end */
+.cu-card {
+    margin-right: 30px;
+    min-width: 150px;
+    max-width: 150px;
+    min-height: 200px;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cu-active {
+    transition: 0.3s;
+    box-shadow:
+        rgba(236, 88, 2, 0.6) 5px 5px,
+        rgba(236, 88, 2, 0.3) 10px 10px,
+        rgba(236, 88, 2, 0.2) 15px 15px,
+        rgba(236, 88, 2, 0.1) 20px 20px;
+}
+
+.taskgroup-title {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar-menu {
+        padding-top: 15px;
+    }
+
+    .sidebar-menu a {
+        font-size: 18px;
+    }
+}
+
+/* Graph card */
+.graph-card,
+.task-card {
+    background-color: white;
+    border-radius: 20px;
+}
+
+#taskListViewBody {
+    max-height: 35vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.graph-card {
+    max-height: 300px;
+}
+
+.outer-circle,
+.inner-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-circle {
+    background-image: none;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+
+}
+
+/* Graph card end */
+.acc-head {
+    background-color: var(--primary) !important;
+    color: white !important;
+}
+
+.acc-body {
+    background-color: var(--secondary);
+}
